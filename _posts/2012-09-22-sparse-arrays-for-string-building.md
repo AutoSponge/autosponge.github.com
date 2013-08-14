@@ -17,7 +17,7 @@ Ways to create sparse arrays:
 
 A co-worker was trying to make a repeating string and used a sparse array; it looked something like this:
 
-`
+{% highlight javascript %}
 var arr = Array(9);
 var str = ""; 
 arr.forEach(function () {
@@ -28,4 +28,56 @@ arr.forEach(function () {
 arr.map(function () {
     return "\<td\>\<\/td\>";
 });
-`
+{% endhighlight %}
+
+Both statements fail for the same reason: the JavaScript engine does not iterate over `undefined` members of an array. Iteration based on length, like typical `for` and `while` loops, work fine. But `.forEach` and `.map` work like for-in which skips the `undefined` member(s).
+
+{% highlight javascript %}
+//setup
+var arr = [];
+arr.length = 10;
+arr[5] = "";
+var count = 0;
+ 
+//test for
+var i, len;
+for (i = 0, len = arr.length; i < len; i += 1) {
+    count += 1;
+}
+console.log(count); //10
+ 
+//test while
+count = 0;
+var i = arr.length;
+while (i--) {
+    count += 1;
+}
+console.log(count); //10
+ 
+//test for-in
+var i, count = 0;
+for (i in arr) {
+    count += 1;
+}
+console.log(count); //1
+ 
+//test forEach
+var count = 0;
+arr.forEach(function () {
+    count += 1;
+});
+console.log(count); //1
+ 
+//test map
+var count = 0;
+arr.map(function () {
+    count += 1;
+});
+console.log(count); //1
+{% endhighlight %}
+
+I came up with some variations of this idea that work (seen here: [jsPerf](http://jsperf.com/build-mostly-empty-tds)). The test task was to write code that will inject a “test” td at the fourth position of 9 (otherwise empty) td’s. Some are quite nice syntactically, but none seem to perform like a `for` loop. This one was my favorite for its simplicity.
+
+{% highlight javascript %}
+Array.prototype.join.call({3: "<td>test</td>", length: 9}, "<td></td>");
+{% endhighlight %}
