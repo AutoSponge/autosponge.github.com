@@ -1,7 +1,6 @@
 ---
 layout: post
 category : blog
-tagline: "Without Recursion"
 tags : [javascript, functional, performance]
 ---
 {% include JB/setup %}

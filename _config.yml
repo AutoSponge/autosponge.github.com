@@ -51,11 +51,6 @@ prose:
           element: "text"
           label: "Category"
           value: ""
-      - name: "tagline"
-        field:
-          element: "text"
-          label: "Tagline"
-          value: ""
       - name: "tags"
         field:
           element: "text"
