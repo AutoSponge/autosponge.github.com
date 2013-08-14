@@ -2,6 +2,11 @@ code, pre {
     font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
     font-size:0.95em;
     margin: 1em 0 1.5em 0;
+    background: #f8f8ff;
+}
+
+.highlight code, pre {
+    background: #f8f8ff;
 }
 
 .highlight span {
