@@ -1,10 +1,24 @@
+# git stuffs #
+##############
 _site/*
 _theme_packages/*
 
-Thumbs.db
-.DS_Store
-
+# git stuffs #
+##############
 !.gitkeep
 
+# ruby stuffs #
+###############
 .rbenv-version
 .rvmrc
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# IDE generated files #
+#######################
+.idea/*

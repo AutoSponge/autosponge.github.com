@@ -12,11 +12,11 @@ pygments: true
 title : Jekyll Bootstrap
 tagline: Site Tagline
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Paul Grenier
+  email : pgrenier@gmail.com
+  github : AutoSponge
+  twitter : @AutoSponge
+#  feedburner : feedname
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -26,7 +26,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://username.github.io
+production_url : http://autosponge.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -83,16 +83,16 @@ JB :
   comments :
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
+      short_name : autosponge
+#    livefyre :
+#      site_id : 123
+#    intensedebate :
+#      account : 123abc
+#    facebook :
+#      appid : 123
+#      num_posts: 5
+#      width: 580
+#      colorscheme: light
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -101,14 +101,15 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-123-12'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
-    piwik :
-        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
-        idsite : '1'                   # the id of the site on Piwik
+        tracking_id : 'UA-43185907-1'
+
+#    getclicky :
+#      site_id :
+#    mixpanel :
+#        token : '_MIXPANEL_TOKEN_'
+#    piwik :
+#        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
+#        idsite : '1'                   # the id of the site on Piwik
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
@@ -129,3 +130,34 @@ JB :
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
   
+prose:
+  rooturl: "_posts"
+  siteurl: "http://autosponge.github.io/"
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "select"
+          label: "Select a layout"
+          placeholder: "Default"
+          options:
+            - name: "post"
+              value: "post"
+            - name: "fake"
+              value: "fake"
+          selected: "post"
+      - name: "category"
+        field:
+          element: "text"
+          label: "Category"
+          value: ""
+      - name: "tagline"
+        field:
+          element: "text"
+          label: "Tagline"
+          value: ""
+      - name: "tags"
+        field:
+          element: "text"
+          label: "Tags"
+          value: ""
