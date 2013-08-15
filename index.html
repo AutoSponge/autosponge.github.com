@@ -5,13 +5,15 @@ title: Home
 
 <!-- post styling -->
 
-{% for post in paginator.posts %}
-<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-<div class="content">
-    {{ post.content }}
-</div>
-<aside class="details">posted on the <time>{{ post.date | date_to_string }}</time></aside>
-{% endfor %}
+<ul class="unstyled">
+    {% for post in paginator.posts %}
+    <li>
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <aside class="details"><strong><time>{{ post.date | date_to_string }}</time></strong></aside>
+        <p>{{ post.excerpt }}<a href="{{ post.url }}">Read more...</a></p>
+    </li>
+    {% endfor %}
+</ul>
 
 <!-- pagination (a page1 folder isn't created by Jekyll.
 To avoid 404s when going to the first page it must be

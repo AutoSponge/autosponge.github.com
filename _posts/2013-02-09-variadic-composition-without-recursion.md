@@ -3,7 +3,6 @@ layout: post
 category : blog
 tags : [javascript, functional, performance]
 ---
-{% include JB/setup %}
 
 I recently caught up on some technical reading. I’m particularly enjoying posts related to functional programming.
 One downside to functional programming is the performance hit we take jumping scope and making extra function calls

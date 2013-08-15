@@ -5,7 +5,10 @@ category: blog
 tags: javascript
 ---
 
-A sparse array is an instance of `Array` that has `undefined` as one or more members. I’ve seen them used, for performance reasons, in game engines to pre-allocate a buffer. I believe it has something to do with one versus two operations–altering a member versus adding a member and increasing length. But there are other uses for them if you know what you can and can’t do with them.
+A sparse array is an instance of `Array` that has `undefined` as one or more members. I’ve seen them used, for
+performance reasons, in game engines to pre-allocate a buffer. I believe it has something to do with one versus two
+operations–altering a member versus adding a member and increasing length. But there are other uses for them if you
+know what you can and can’t do with them.
 
 Ways to create sparse arrays:
 
