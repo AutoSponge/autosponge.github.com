@@ -36,4 +36,4 @@ $("#regexp").on("keypress", function (evt) {
 });
 {% endhighlight %}
 
-In this test, far too much time is spent dealing with the event and not enough time just working out the keypress so there appears to be no winner. Based on syntactic brevity, the `RegExp` is the clear choice. However, if you need to control characters other than those easily expressed in RegExp (like control characters or unicode), you might try the `indexoOf` method with no loss in performance.
+In this test, far too much time is spent dealing with the event and not enough time just working out the keypress so there appears to be no winner. Based on syntactic brevity, the `RegExp` is the clear choice. However, if you need to control characters other than those easily expressed in RegExp (like control characters or unicode), you might try the `indexOf` method with no loss in performance.
