@@ -10,7 +10,7 @@ While writing a handler for key events, I realized I was having to convert the e
 Here’s a quick test:
 [http://jsperf.com/regexp-vs-indexof2]()
 
-Not surprisingly, Chrome was fast enough in both cases and RegExp was slightly faster. Surprisingly, IE and FF were much faster for indexOf with FF running the index test as fast as Chrome’s RegExp results.
+Not surprisingly, Chrome was fast enough in both cases and `RegExp` was slightly faster. Surprisingly, IE and FF were much faster for `indexOf` with FF running the index test as fast as Chrome’s `RegExp` results.
 
 So I went further in the test, creating actual handlers with jQuery:
 [http://jsperf.com/handle-keypress]()
@@ -36,4 +36,4 @@ $("#regexp").on("keypress", function (evt) {
 });
 {% endhighlight %}
 
-In this test, far too much time is spent dealing with the event and not enough time just working out the keypress so there appears to be no winner. Based on syntactic brevity, the RegExp is the clear choice. However, if you need to control characters other than those easily expressed in RegExp (like control characters or unicode), you might try the indexoOf method with no loss in performance.
+In this test, far too much time is spent dealing with the event and not enough time just working out the keypress so there appears to be no winner. Based on syntactic brevity, the `RegExp` is the clear choice. However, if you need to control characters other than those easily expressed in RegExp (like control characters or unicode), you might try the `indexoOf` method with no loss in performance.
