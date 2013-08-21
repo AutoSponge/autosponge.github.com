@@ -24,6 +24,7 @@ prose:
         field:
           element: "multiselect"
           label: "Tags"
+          alterable: true
           options:
             - name: "javascript"
               value: "javascript"
