@@ -25,3 +25,8 @@ prose:
           element: "text"
           label: "Tags"
           value: ""
+      - name: "test"
+        field:
+          element: "text"
+          label: "Test"
+          value: ""
