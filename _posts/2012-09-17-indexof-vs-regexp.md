@@ -2,7 +2,7 @@
 published: true
 layout: post
 category: blog
-tags: "javascript, performance"
+tags: [javascript, performance]
 ---
 
 While writing a handler for key events, I realized I was having to convert the event’s key data to test for valid inputs every time. I wondered if using a list of valid inputs would be faster than checking a regular expression.

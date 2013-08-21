@@ -22,11 +22,13 @@ prose:
           value: ""
       - name: "tags"
         field:
-          element: "text"
+          element: "multiselect"
           label: "Tags"
-          value: ""
-      - name: "test"
-        field:
-          element: "textarea"
-          label: "Test"
-          value: ""
+          options:
+            - name: "javascript"
+              value: "javascript"
+            - name: "performance"
+              value: "performance"
+            - name: "functional"
+              value: "functional"
+          selected: "javascript"
