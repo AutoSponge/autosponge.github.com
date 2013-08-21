@@ -27,6 +27,6 @@ prose:
           value: ""
       - name: "test"
         field:
-          element: "text"
+          element: "textarea"
           label: "Test"
           value: ""
