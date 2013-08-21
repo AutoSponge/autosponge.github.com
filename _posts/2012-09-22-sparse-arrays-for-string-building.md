@@ -2,7 +2,9 @@
 published: true
 layout: post
 category: blog
-tags: javascript
+tags: 
+  - javascript
+"": string maninpulation
 ---
 
 A sparse array is an instance of `Array` that has `undefined` as one or more members. I’ve seen them used, for
