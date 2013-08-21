@@ -1,7 +1,13 @@
 ---
 layout: post
-category : blog
-tags : [javascript, functional, performance]
+category: blog
+tags: 
+  - javascript
+  - functional
+  - performance
+  - "javascript,functional,performance"
+published: true
+test: "this is a test, of the new pattern, stuff"
 ---
 
 I recently caught up on some technical reading. I’m particularly enjoying posts related to functional programming.
