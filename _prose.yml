@@ -22,6 +22,6 @@ prose:
           value: ""
       - name: "tags"
         field:
-          element: "text"
+          element: "textarea"
           label: "Tags"
           value: ""
