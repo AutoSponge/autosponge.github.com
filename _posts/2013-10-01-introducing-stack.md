@@ -5,16 +5,16 @@ category: blog
 tags: [javascript, functional]
 ---
 
-<div style="float:right;padding-left:10px;">
-<a href="http://xkcd.com/1270/"><img src="http://imgs.xkcd.com/comics/functional.png" alt="functional"></a>
-</div>
-
 [Stack.js](https://github.com/AutoSponge/stack) began as a simple, academic exercise to explore the utility of
 [linked-lists](http://en.wikipedia.org/wiki/Linked_list) in JavaScript.  I think
 [Nicholas C. Zakas's article](http://www.nczonline.net/blog/2009/04/13/computer-science-in-javascript-linked-list/)
 made me curious, initially, but the more I learned, the more I appreciated this simple
 structure.  For instance, programmers can use linked-lists, like arrays, to implement
 other well-known structures like queues and stacks.
+
+<div style="float:right;padding-left:10px;">
+<a href="http://xkcd.com/1270/"><img src="http://imgs.xkcd.com/comics/functional.png" alt="functional"></a>
+</div>
 
 While implementing a stack using a singly-linked list, friends at work were buzzing about
 Reginald Braithwaite's [JavaScript Allongé](https://leanpub.com/javascript-allonge).  To understand
