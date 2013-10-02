@@ -60,12 +60,12 @@ var X = function () {};
 type.call(new X()); //[object Object]
 
 X.prototype.toString = function () {
-    return "[object X]";
+    return "\[object X\]";
 };
 type.call(new X()); //[object Object]
 {% endhighlight %}
 
-You probably expected to see "[object X]".
+You probably expected to see "\[object X\]".
 
 Well, there's another `Object.prototype` method called `toLocaleString`.
 It's best known as a way to localize date objects.  However, as the MDC points out
@@ -92,7 +92,7 @@ type.call("x");     // "x"
 type.call(/x/)      // "/x/"
 {% endhighlight %}
 
-By using toLocaleString only for "[object Object]" results, we can create a more
+By using toLocaleString only for "\[object Object\]" results, we can create a more
 convenient type method and get the expected results.  I will also take the time to fix
 null, undefined, and NaN.  Using a simple memoizer, I will collect and return the
 constructor in lower case like jQuery does:
@@ -156,8 +156,8 @@ console.log("type(document) //", type(document), type(document) === "htmldocumen
 {% endhighlight %}
 
 EDIT 06-30-2011:
-Chrome reports Arguments as "[object Arguments]", which you may think incredibly useful.
-However, other browsers return [object Object] and there remains no easy way to differentiate
+Chrome reports Arguments as "\[object Arguments\]", which you may think incredibly useful.
+However, other browsers return \[object Object\] and there remains no easy way to differentiate
 arguments from non-arguments objects.  So, I recommend adding another case at the end of
 the switch statement above:
 
