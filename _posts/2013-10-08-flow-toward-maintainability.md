@@ -16,6 +16,8 @@ Certain design and testing methodologies can guide developers to create smaller,
 seems to encourage organized, maintainable applications. Especially for
 modern web applications where we inter-connect disparate systems, "design by contract" makes sense.
 
+![noflodesign](/assets/img/noflodesign.png)
+
 Take the [clock example](http://noflojs.org/noflo-ui/#example/6699161) from [NoFlo](http://noflojs.org/):
 most experienced front-end developers can recreate this widget and you can find several tutorials
 by searching the interwebs. I decided to follow the NoFlo design to write a clock application using
