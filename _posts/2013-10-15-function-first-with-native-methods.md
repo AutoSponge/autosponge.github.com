@@ -60,6 +60,6 @@ This produces:
 1. reduceRigth - reduceRight(fn)(arr)
 1. reduceRigthTo - reduceRightTo(arr)(fn)
 
-Here are some tests you can copy/past into the console.
+Here are some tests you can copy/paste into the console.
 
 {% gist 6993297 tests.js %}
