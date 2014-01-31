@@ -59,29 +59,6 @@ function sum() {
 }
 
 function leave( n ) {
-    return function ( fn, args ) {
-        return function () {
-            //leave refers to take, that's cool!
-            return fn.apply( this, ( args || [] ).concat( take_( n )( arguments ) ) );
-        };
-    };
-}
-
-[1, 2].map( leave( 1 )( sum, [1, 2] ) );
-//[4, 5]
-{% endhighlight %}
-
-*For fun, click the "repl" link below and change the code to `...leave( 2 )...`.  Why did that happen?*
-
-Try it in the [repl](http://bit.ly/1gnzsDS)
-
-## EDIT:
-
-I thought of an alternative version where `leave` does not deal with arguments at all using `papply`:
-
-{% highlight js %}
-//replaces leave in the above example
-function leave( n ) {
     return function ( fn ) {
         return function () {
             return fn.apply( this, take_( n )( arguments ) );
@@ -89,6 +66,10 @@ function leave( n ) {
     };
 }
 
-//slight change to the usage, allows 1,2 to be passed as separate parameters
-[1, 2].map( leave( 1 )( _part_.papply( sum )( 1, 2 ) ) );
+[1, 2].map( leave( 1 )( sum.bind( null, 1, 2 ) ) );
+//[4, 5]
 {% endhighlight %}
+
+*For fun, click the "repl" link below and change the code to `...leave( 2 )...`.  Why did that happen?*
+
+Try it in the [repl](http://bit.ly/1de0tBK)
