@@ -74,3 +74,21 @@ function leave( n ) {
 *For fun, click the "repl" link below and change the code to `...leave( 2 )...`.  Why did that happen?*
 
 Try it in the [repl](http://bit.ly/1gnzsDS)
+
+## EDIT:
+
+I thought of an alternative version where `leave` does not deal with arguments at all using `papply`:
+
+{% highlight js %}
+//replaces leave in the above example
+function leave( n ) {
+    return function ( fn ) {
+        return function () {
+            return fn.apply( this, take_( n )( arguments ) );
+        };
+    };
+}
+
+//slight change to the usage, allows 1,2 to be passed as separate parameters
+[1, 2].map( leave( 1 )( _part_.papply( sum )( 1, 2 ) ) );
+{% endhighlight %}
