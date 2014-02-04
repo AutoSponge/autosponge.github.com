@@ -54,7 +54,7 @@ var reverse = _part_.create_( Array.prototype.reverse )();
 function flip( fn ) {
   return function ( ...args1 ) {
     return function ( ...args2 ) {
-	    return fn.apply( this, reverse( [...args1, ...args2] ) );
+      return fn.apply( this, reverse( [...args1, ...args2] ) );
     };
   };
 }
