@@ -108,11 +108,11 @@ On the other hand, `fix` could work like this:
 {% highlight js %}
 var splice_ = _part_.create_( Array.prototype.splice );
 
-function fix( fn, n, arg ) {
+function fix( fn, n, arg, receiver ) {
   return function () {
     var args = arguments;
     splice_( n, 0, arg )( args );
-    return fn.apply( this, args );
+    return fn.apply( receiver || this, args );
   };
 }
 
