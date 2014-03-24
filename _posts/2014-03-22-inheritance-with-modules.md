@@ -26,3 +26,10 @@ For modules needing more initialization, you might consider exporting a construc
 or `.create()` method.  The module consumer can avoid the `new` operator with
 `var factory = require( 'Module' ).factory` and yet retains the power of `util.inherits( fn, Module )`.
 
+__Update__: I figured I should support other patterns for inheritance, so I updated
+[perfget](https://www.npmjs.org/package/perfget) to 0.2.1 to support Object.create.  This time, I used a factory
+to generate a clean instance from the constructor I added _under the hood_ in 0.2.0.  This means that my old API did
+not change, I just have another (better?) way to include perfget's the functionality.
+
+While trying to publish, I kept getting `EPUBLISHCONFLICT` errors.  After updating npm, `npm install npm -g`
+I was able to publish again.
