@@ -21,10 +21,7 @@ depending on your needs, you may start using multiple libraries; or you may writ
 
 If you choose to use libraries, I recommend adding a "bridge" to your app.  A bridge file abstracts your usage of
 library code by exposing the methods you use.  If you need to change a particular implementation later on, you
-only need to change it in one place.  This works even better if you can load libraries dynamically and hide them
-from the global namespace or remove them from global once you cache the methods you want.  Lastly, make sure you
-cover your bridge with unit tests that express your use pattern(s).  At first you may just copy unit tests
-from the library's unit test.  If your pattern changes, you will have an easy way to test the implementation.
+only need to change it in one place.
 
 {% highlight js %}
 //bridge.js
@@ -38,7 +35,12 @@ myNamespace.contains = jQuery.contains;
 myNamespace.contains = function () { ... };
 {% endhighlight %}
 
-If want (or need) to write your own function, keep reading!
+This works even better if you can load libraries dynamically and hide them
+from the global namespace or remove them from global once you cache the methods you want.  Lastly, make sure you
+cover your bridge with unit tests that express your use pattern(s).  At first you may just copy unit tests
+from the library's unit test.  If your pattern changes, you will have an easy way to test the implementation.
+
+If want (or need) to write your own function(s), keep reading!
 
 Things to consider:
 
@@ -49,22 +51,43 @@ Things to consider:
 - Performance(?): If you worry about this, save it for last
 
 I like to start with `Array.prototype.some` because it can short-circuit and returns the same value as other
-`contains` methods.
+`contains` methods, a Boolean.
 
 {% highlight js %}
-_part_._borrow( this )( Array.prototype, "some" );
+var native = require( 'part-native' );
+var _some = native( Array._some );
 
+//a curried equals fn
 function equals( a ) {
   return function ( b ) {
     return a === b;
   }
 }
 
-function contains( thing, it ) {
+//first pass
+function contains( it, thing, match ) {
   return _some( thing )( equals( it ) );
 };
 
 contains( [1, 2, 3], 1 ); //true
+{% endhighlight %}
+
+That works.  Now we need to setup some tests to see if it covers our other scenarios.
+
+We should also consider the signature of the function and how it might be used.  For instance,
+as an instance method.
+
+{% highlight js %}
+
+//thing's object keys
+//matches options (auto curry?)
+//fallback to this
+//fallback to strict equals
+//use part-style
+function contains( it, thing, matches ) {
+  return _some( thing || this )( (matches || equals)( it ) );
+};
+
 {% endhighlight %}
 
 ###PROS
