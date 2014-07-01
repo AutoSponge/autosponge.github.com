@@ -8,6 +8,9 @@
 
 <!-- Reddit -->
 <li><script type="text/javascript" src="http://www.reddit.com/buttonlite.js?i=4"></script>
+
+<!-- Coderwall -->
+<li><a href="https://coderwall.com/autosponge"><img alt="Endorse AutoSponge on Coderwall" src="https://api.coderwall.com/autosponge/endorsecount.png" /></a></li>
 </ul>
 
 <script>
