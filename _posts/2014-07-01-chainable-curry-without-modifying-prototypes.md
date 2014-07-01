@@ -80,3 +80,5 @@ function curry( arg ) {
 {% endhighlight %}
 
 See the rest of the [gist](https://gist.github.com/AutoSponge/a2ef935291f99a9b9a93) for tests (es6).
+
+__EDIT__: I turned this into an [npm module](https://www.npmjs.org/package/dot-curry).  
