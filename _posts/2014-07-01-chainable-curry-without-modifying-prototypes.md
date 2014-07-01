@@ -79,4 +79,4 @@ function curry( arg ) {
 }
 {% endhighlight %}
 
-See the rest of the [gist](https://gist.github.com/autosponge/a2ef935291f99a9b9a93) for tests (es6).
+See the rest of the [gist](https://gist.github.com/AutoSponge/a2ef935291f99a9b9a93) for tests (es6).
