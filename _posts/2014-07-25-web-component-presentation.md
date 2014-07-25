@@ -10,10 +10,8 @@ If you like web development but hate design, raise your hand.
 To be clear, I hate design because I suck at it.  I'm good at implementing
 someone else's designs but I really don't find joy in designing something from scratch.
 
-_Enter this __new era__ of [web components](http://webcomponents.org/)._  
-Google's [Polymer](http://www.polymer-project.org/) web components captured my attention because that
-team does a great job of communicating their vision and [making demos](http://www.polymer-project.org/resources/video.html).  
-On top of that, the new 
+_Enter this __new era__ of [web components](http://webcomponents.org/)._  Google's [Polymer](http://www.polymer-project.org/) web components captured my attention because that
+team does a great job of communicating their vision and [making demos](http://www.polymer-project.org/resources/video.html). On top of that, the new 
 [Paper elements collection](http://www.polymer-project.org/docs/elements/paper-elements.html#paper-button)
 seem like good design.  I mean, due to a lack of knowledge on the subject, I can't say it _is_ good design, 
 but I have no qualms about ripping it off... over and over... and over.
