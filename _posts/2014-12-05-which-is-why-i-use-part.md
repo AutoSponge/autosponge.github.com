@@ -11,7 +11,7 @@ I've done staying on top of things.
 
 This week, I read [Calling an Array of Functions in JavaScript](http://zpao.com/posts/calling-an-array-of-functions-in-javascript/).
 Paul O’Shannessy is correct, this stuff is not obvious.  Which is why I made (and use) [part](https://github.com/AutoSponge/_part_).
-Part allows me to approach problem's like this, calling an array of functions, using the native functionality
+Part allows me to approach problems like this, calling an array of functions, using the native functionality
 I know but with the syntax I want.  Paul's blog doesn't allow comments, so I had to post this...
 
 {% highlight js %}
