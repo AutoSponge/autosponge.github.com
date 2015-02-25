@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/autosponge
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://autosponge.github.io
+  * I am autosponge (https://keybase.io/autosponge) on keybase.
+  * I have a public key with fingerprint 965C 5A63 1C5E 1BB8 D76C  252A DD8A 0FF0 AA8D 9752
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "965c5a631c5e1bb8d76c252add8a0ff0aa8d9752",
+            "host": "keybase.io",
+            "key_id": "dd8a0ff0aa8d9752",
+            "kid": "01015857ac32f061ab73766a4f2c51a29719f3e7a768fdc17e2c8c2ff32340b7aa700a",
+            "uid": "1569665570e96631d80807c2e45faa19",
+            "username": "autosponge"
+        },
+        "service": {
+            "hostname": "autosponge.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1424832417,
+    "expire_in": 157680000,
+    "prev": "f31aa7c6510c96a18cfd5483ea28ae8048197342527ff896722840cacdc70fba",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.4
+Comment: https://keybase.io/crypto
+
+yMIhAnicbZJpSBVRFMffs1R8aWRY0ULQfCjTV82d7c5MWRAFQXvYJqbduXPnvcF6
+85qZZ6lJ0p6tEmGbtsnrg/QlJCSCsjSMFtKIoHq0r1RW0F7WHatPdb8c7rn/87v3
+f+5pzejlC/ifFWyvbJ7flOe/3DI95st/DY9UMJqllzFqBVNCeoJhRkLEjtpmxGVU
+RpFELCKJB1gkQNNkHUqYEzmk6zJiDYNFSNYVKHJMkAlbjldBMRpyyFjTojm6KTZ1
+mv2PvqTngAUsEGURIsxzBisBpEEeShISDA6LAHEKBIrBE4igJBs6BpBwWMacYfAc
+L7AaRAiyLKK4WA8OiJIiSaIIWUIjD3SZlVmIOSKIBkJA8YQOsSNoOaFqFHMtJ2pR
+w0xlkKH5UhMTrwmel380Y0OmG45pv51Fbcu1sLWMKsKuG3VUj+CWRb2SlUQr/gMr
+1syITjtKK0qJ7ZhWhFEBVWLX9OhA4ASZ5wQAgwxZFTVtUmx6CpG6Zeny7iGlFGnw
+gDrFkghYrEgIyNjQRVpKECcjIrOCDBTIC/RroGHIigQ5ThZYjLCOIWtoXoMcsiJi
+MSpPn4lCFOmYoQhyYzb1fv5cYW+fP+BLSU7yZsIXSOv3d1LWbUrtzq06+eBbcl7F
+1ytPmnYKE7YGdrUeP+ZMqbr+dG5+bvOBshntfb8HGxeIhcOq+fSZ2T8zWx58uDYR
+d51WB77tD2Zfep1DvtSulu71PnpwQ1J5/GPjma71icFNWUXv16xvnJiVU1M/Qr+a
+NHzWnAnpbbkNib3XphXBfeqtuze6zzrui8NvUurTsncPvZm4vmDx7SVp6x7Vje/c
+XFO+qt/DhlOHLvLPkx/fH83k3/nR0dU+am71wnlLt7T2rdhf2535+d2rvI2fomP6
+LForb9kRzhjX3MA89g/pqJ5aFfdnkdr4AKnugtrJTN1klwxbIqTuafs2siExSDih
+vTw2JyPeOmlywbZUd7zyC3RULJI=
+=1RYM
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/autosponge
+
+==================================================================
