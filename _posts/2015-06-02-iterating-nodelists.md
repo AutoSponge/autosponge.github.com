@@ -27,10 +27,9 @@ Array.prototype.slice.call(elms, 0).map(function (elm) {console.log(elm.href)});
 
 //es6 way(s)
 Array.from(elms).map(({href}) => console.log(href));
-for (const {href} of elms[Symbol.iterator]()) console.log(href);
 for (const {href} of elms) console.log(href);
+[for ({href} of elms) href].map(href => console.log(href));
 [...elms].map(({href}) => console.log(href));
-[...elms[Symbol.iterator]()].map(({href}) => console.log(href));
 
 //es7 way(s)
 Object.values(elms).map(({href}) => console.log(href));
