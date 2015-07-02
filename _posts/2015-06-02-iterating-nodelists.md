@@ -18,7 +18,7 @@ failed (beer on an empty stomach may or may not have played a role).
 I slept on it and woke up with `Array.from` which totally works. I read up on some other proposals Babel already 
 supports: `Object.entries` and `Object.values`. Now, I have a solution with no problem...
 
-```js
+{% highlight js %}
 var elms = document.querySelectorAll('a');
 
 //es5 way
@@ -29,4 +29,4 @@ Array.from(elms).map(elm => console.log(elm.href));
 
 //es7 way
 Object.values(elms).map(elm => console.log(elm.href));
-```
+{% endhighlight %}
