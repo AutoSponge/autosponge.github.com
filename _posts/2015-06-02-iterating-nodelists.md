@@ -1,0 +1,32 @@
+---
+published: true
+layout: post
+category: blog
+tags: [javascript, es6, es7]
+---
+
+I was happy to meetup with other JavaScripters in Iceland. I was also happy to discuss my latest set of tools which includes 
+[Babel](http://babeljs.io/) (via [JSPM](http://jspm.io/)) when a discussion topic came up that I thought I had a handle on.
+
+Iterating a [`NodeList`](https://developer.mozilla.org/en/docs/Web/API/NodeList)--we all need to do it from time to time.  Since
+I started using tools like [virtual-dom](https://github.com/Matt-Esch/virtual-dom) and [paperclip](http://paperclipjs.com)
+I just haven't iterated a `NodeList` that wasn't another collection type (e.g., jquery object). This was evident as I opened
+the Babel REPL and starting throwing things at the problem: [for-of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of),
+[spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator), and other ideas
+failed (beer on an empty stomach may or may not have played a role).
+
+I slept on it and woke up with `Array.from` which totally works. I read up on some other proposals Babel already 
+supports: `Object.entries` and `Object.values`. Now, I have a solution with no problem...
+
+```js
+var elms = document.querySelectorAll('a');
+
+//es5 way
+Array.prototype.slice.call(elms, 0).map(function (elm) {console.log(elm.href)});
+
+//es6 way
+Array.from(elms).map(elm => console.log(elm.href));
+
+//es7 way
+Object.values(elms).map(elm => console.log(elm.href));
+```
