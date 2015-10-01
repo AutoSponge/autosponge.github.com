@@ -1,9 +1,12 @@
-# This is the default format. 
+# Adding support for emoji
+gems:
+  - jemoji
+
+# This is the default format.
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".gitignore"]
-pygments: true
 paginate: 5
 
 # Themes are encouraged to use these universal variables 
