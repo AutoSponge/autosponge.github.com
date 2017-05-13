@@ -121,7 +121,7 @@ let interval
 const promise1 = () => new CancelablePromise(() => {
   // will not resolve on its own
   interval = setInterval(() => {console.log('Promise 1 still going')})
-}, () => clearTimeout(interval))
+}, () => clearInterval(interval))
 
 let timeout
 const promise2 = () => new CancelablePromise((resolve) => {
