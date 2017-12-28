@@ -5,8 +5,6 @@ category: blog
 tags: [accessibility, mentoring]
 ---
 
-# Make or Break
-
 This year was brutal. If there's an upside to the socio-political turmoil in our country this year, it's that I was less likely to let things go and I had the energy to stay focused on what mattered.
 
 When you go to bed worried, wake up annoyed, and go through the day generally angry, it doesn't take much to set you off. That was me this year. I'm getting better at managing the stress. I'm also getting better at picking the hills I want to die on. But my quick temper was good for something.
